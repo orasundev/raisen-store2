@@ -1,3 +1,4 @@
+"use server";
 import { LATEST_PRODUCT_LIMIT } from "@/lib/constants";
 import { PrismaClient } from "@/lib/generated/prisma/client";
 import { convertToPlainObject } from "@/lib/utils";

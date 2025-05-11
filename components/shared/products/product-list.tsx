@@ -19,7 +19,7 @@ const ProductList = ({
       {limitData.length > 0 ? (
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
           {limitData.map((product: Product) => (
-            <ProductCard key={product.id} product={product} />
+            <ProductCard key={product.slug} product={product} />
           ))}
         </div>
       ) : (

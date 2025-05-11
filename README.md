@@ -89,3 +89,8 @@ Typescript-first schema validation with static type inference.
 
     Lecture 10
     Serverless Environment Setup.
+
+    npm install @prisma/adapter-neon
+    npm install @neondatabase/serverless
+    npm install ws
+    npm i --save-dev @types/ws

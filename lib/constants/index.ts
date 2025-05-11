@@ -6,3 +6,6 @@ export const APP_DESCRIPTION =
 // process.env.NEXT_PUBLIC_APP_KEYWORDS || 'My App Keywords'
 export const SERVER_URL =
   process.env.NEXT_PUBLIC_APP_URL || "https://localhost:3000"; // 'https://myapp.com'
+// set product limit
+export const LATEST_PRODUCT_LIMIT =
+  Number(process.env.LATEST_PRODUCT_LIMIT) || 4;

@@ -41,3 +41,51 @@ Now initiliaze prisma.
 npx prisma init
 Install Prisma Extension.
 prisma
+
+create schema.prisma model
+
+Now run create command.
+npx prisma generate will create the client.
+
+now migrate db
+npx prisma migrate dev --name init
+
+    Successfully Migrated Schema.
+
+    Now insert the sample seed data to database.
+        We need to create a sync function.
+
+                    //import { PrismaClient } from '@prisma/client';
+                    import { PrismaClient } from "@/lib/generated/prisma/client";
+                    import sampleData from "./sample-data";
+
+                    async function main() {
+                    const prisma = new PrismaClient();
+
+                    // await prisma.user.deleteMany();
+                    // await prisma.user.createMany({ data: sampleData.users })
+                    await prisma.product.deleteMany();
+                    await prisma.product.createMany({ data: sampleData.products });
+                    console.log("Database seeded successfully!");
+                    }
+
+                    main();
+
+Now execute it.
+npx tsx .\db\seed.ts
+Successfully Created.
+
+npx prisma studio
+
+Lecture 8
+
+Using Zod.
+Typescript-first schema validation with static type inference.
+
+    so we cnnot use "any" in tsx.
+    use zod.
+    npm i zod
+
+
+    Lecture 10
+    Serverless Environment Setup.

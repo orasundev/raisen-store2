@@ -12,6 +12,7 @@ import MenuBar from "@/components/shared/menubar";
 import { Metadata } from "next";
 import sampleData from "@/db/sample-data";
 import ProductList from "@/components/products/product-list";
+import { getLatestProducts } from "@/db/actions/product.action";
 
 export const metadata: Metadata = {
   title: "Home",
@@ -19,15 +20,12 @@ export const metadata: Metadata = {
 const delay = (ms: number) => new Promise((res) => setTimeout(res, ms));
 
 const HomePage = async () => {
-  await delay(5000);
+  // await delay(5000);
   //console.log(sampleData);
+  const latestProducts = await getLatestProducts();
   return (
     <>
-      <ProductList
-        data={sampleData.products}
-        title="Latest Arrivals."
-        limit={4}
-      />
+      <ProductList data={latestProducts} title="Latest Arrivals." />
     </>
   );
 };

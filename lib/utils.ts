@@ -5,6 +5,7 @@ export function cn(...inputs: ClassValue[]) {
   return twMerge(clsx(inputs));
 }
 
+//convert Prisma object into plain object
 export function convertToPlainObject<T>(value: T): T {
   return JSON.parse(JSON.stringify(value));
 }

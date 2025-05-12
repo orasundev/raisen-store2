@@ -94,3 +94,9 @@ Typescript-first schema validation with static type inference.
     npm install @neondatabase/serverless
     npm install ws
     npm i --save-dev @types/ws
+
+Lecture 11:
+npx shadcn@latest add badge --legacy-peer-deps
+
+Lecture 12:
+Deployment on Vercel
